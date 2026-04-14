@@ -37,12 +37,3 @@ cd code/
 python -m pytest CoSAEM/tests/ -v
 ```
 
-## Citation
-
-If you use this code, please cite:
-
-```
-Chen, S. and Lv, L. (2026). Cooperative Surrogate-Assisted Evolutionary
-Multitasking for Expensive Constrained Multiobjective Optimization.
-Swarm and Evolutionary Computation.
-```
