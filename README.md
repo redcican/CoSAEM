@@ -10,30 +10,3 @@ CoSAEM is a dual-task evolutionary framework that solves an auxiliary unconstrai
 2. **UPF-guided directional transfer** — Direction vectors from the surrogate-approximated unconstrained Pareto front steer the constrained search toward feasible, well-converged regions.
 3. **Population state-driven budget allocation** — A sigmoid-based allocator distributes expensive evaluations between tasks based on feasibility ratio and surrogate accuracy.
 
-## Installation
-
-```bash
-pip install numpy scipy scikit-learn
-```
-
-## Quick Start
-
-```python
-from CoSAEM import run_cosam, CoSAEMConfig
-from CoSAEM.problems import MW4
-
-problem = MW4(n_var=15)
-config = CoSAEMConfig(T_max=300, seed=42)
-result = run_cosam(problem, config)
-
-print(f"Found {result.X.shape[0]} non-dominated feasible solutions")
-print(f"Used {result.n_evals} function evaluations")
-```
-
-## Running Tests
-
-```bash
-cd code/
-python -m pytest CoSAEM/tests/ -v
-```
-
